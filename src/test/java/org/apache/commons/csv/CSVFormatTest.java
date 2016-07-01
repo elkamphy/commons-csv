@@ -37,6 +37,7 @@ import java.util.Arrays;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.Rule;
 
 /**
  *
@@ -44,6 +45,8 @@ import org.junit.Test;
  * @version $Id$
  */
 public class CSVFormatTest {
+    @Rule
+    public Timeout globalTimeout = Timeout.seconds(5);
 
     private static void assertNotEquals(final Object right, final Object left) {
         assertFalse(right.equals(left));
