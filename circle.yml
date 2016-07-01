@@ -1,4 +1,7 @@
 test:
+override:
+ mvn integration-test
+  timeout : 5
  post:
    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
