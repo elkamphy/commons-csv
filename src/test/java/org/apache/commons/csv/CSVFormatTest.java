@@ -46,8 +46,6 @@ import org.junit.rules.Timeout;
  * @version $Id$
  */
 public class CSVFormatTest {
-    @Rule
-    public Timeout globalTimeout = Timeout.seconds(5);
 
     private static void assertNotEquals(final Object right, final Object left) {
         assertFalse(right.equals(left));
